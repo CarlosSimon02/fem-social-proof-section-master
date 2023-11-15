@@ -101,6 +101,7 @@ main {
         }
 
         &__item {
+            flex: 1;
             position: relative;
             animation: fadeTestimonials var(--anim-dur) var(--anim-timing-func) calc(var(--anim-delay)*var(--order)) 1 normal both;
             max-width: u.toRem(500px);
