@@ -23,5 +23,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/CarlosSimon02/fem-social-proof-section-master](https://github.com/CarlosSimon02/fem-social-proof-section-master)
+- Live Site URL: [https://fem-social-proof-section-master-carlossimon.vercel.app/](https://fem-social-proof-section-master-carlossimon.vercel.app/)
