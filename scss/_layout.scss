@@ -10,7 +10,6 @@ main {
     @include u.breakpoint(tablet) {
         padding-inline: u.fluid(40px, 165px,tablet,desktop);
         padding-block-start: u.fluid(100px, 118px,tablet,desktop);
-
     }
 
     & .flex-container {
@@ -23,6 +22,7 @@ main {
 
         @include u.breakpoint(tablet) {
             flex-direction: row;
+            gap: u.fluid(39px, 71px,tablet, small-desktop)
         }
     }
 
