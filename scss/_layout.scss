@@ -1,0 +1,137 @@
+@use "sass-utils" as u;
+
+main {
+    margin-inline: auto;
+    max-width: u.toRem(1440px);
+    padding-inline: u.fluid(24px, 165px,mobile,tablet);
+    padding-block-start: u.fluid(82px, 100px,mobile,tablet);
+    padding-block-end: u.fluid(99px, 100px,mobile,tablet);
+
+    @include u.breakpoint(tablet) {
+        padding-inline: u.fluid(40px, 165px,tablet,desktop);
+        padding-block-start: u.fluid(100px, 118px,tablet,desktop);
+
+    }
+
+    & .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: u.toRem(39px);
+        margin-bottom: u.toRem(49px);
+        justify-content: space-between;
+        align-items: center;
+
+        @include u.breakpoint(tablet) {
+            flex-direction: row;
+        }
+    }
+
+    & .desc {
+        position: relative;
+        flex: 1;
+        max-width: u.toRem(445px);
+        animation: fadeDesc var(--anim-dur) var(--anim-timing-func) var(--anim-delay) 1 normal both;
+
+        & h1 {
+            margin-bottom: u.toRem(17px);
+        }
+    }
+
+    & .rates {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: u.toRem(16px);
+
+        @include u.breakpoint(small-desktop) {
+            max-width: u.toRem(540px);
+        }
+
+        &__item {
+            position: relative;
+            animation: fadeRates var(--anim-dur) var(--anim-timing-func) calc(var(--anim-delay)*var(--order)) 1 normal both;
+            background-color: var(--clr-primary-2);
+            padding: u.toRem(16px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: u.toRem(15px);
+            border-radius: u.toRem(8px);
+
+            @include u.breakpoint(small-desktop) {
+                width: u.fluid(382px, 445px,small-desktop,desktop);
+                
+                &:nth-child(1) {
+                    align-self: start;
+                }
+
+                &:nth-child(2) {
+                    align-self: center;
+                }
+
+                &:nth-child(3) {
+                    align-self: end;
+                }
+            }
+
+            @include u.breakpoint(small-desktop) {
+                flex-direction: row;
+            }
+            
+            &__stars {
+                display: flex;
+                gap: u.toRem(8px);
+            } 
+        } 
+    }
+
+    & .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: u.toRem(16px);
+        
+        @include u.breakpoint(small-desktop) {
+            flex-direction: row;
+            gap: u.fluid(16px, 30px,small-desktop,desktop);
+        }
+
+        &__item {
+            position: relative;
+            animation: fadeTestimonials var(--anim-dur) var(--anim-timing-func) calc(var(--anim-delay)*var(--order)) 1 normal both;
+            max-width: u.toRem(500px);
+            background-color: var(--clr-secondary-1);
+            padding-inline: u.toRem(32px);
+            padding-block-start: u.toRem(40px);
+            padding-block-end: u.toRem(35px);
+            border-radius: u.toRem(8px);
+
+            @include u.breakpoint(small-desktop) {
+                margin-top: calc((var(--order) - 1) * u.toRem(16px));
+                height: u.fluid(271px, 250px,small-desktop,desktop);
+            }
+
+            @include u.breakpoint(desktop) {
+                height: auto;
+            }
+
+            &__author {
+                margin-bottom: u.toRem(24px);
+                display: grid;
+                grid-template-areas:
+                    "image name"
+                    "image label";
+                column-gap: u.toRem(23px);
+                row-gap: u.toRem(4px);
+                justify-content: start;
+
+                & img {
+                    grid-area: image;
+                    width: u.toRem(40px);
+                    height: auto;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}

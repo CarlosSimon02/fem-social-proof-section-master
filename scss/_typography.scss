@@ -1,0 +1,57 @@
+@use 'sass-utils' as u;
+
+body {
+    font-family: var(--ff-primary);
+    font-size: u.toRem(17px);
+    line-height: u.toRem(16px);
+}
+
+.desc {
+    text-align: center;
+
+    @include u.breakpoint(tablet) {
+        text-align: left;
+    }
+}
+
+.desc h1 {
+    font-size: u.fluid(40px, 56px,mobile,tablet);
+    line-height: u.fluid(32px, 48px,mobile,tablet);
+    letter-spacing: u.fluid(-1.43px, -2px,mobile,tablet);
+    font-weight: var(--fw-bold);
+    color: var(--clr-secondary-1);
+}
+
+.desc p {
+    font-size: u.toRem(19px);
+    line-height: u.toRem(25px);
+    letter-spacing: u.toRem(-0.63px);
+    font-weight: var(--fw-medium);
+    color: var(--clr-secondary-3);
+}
+
+.rates p {
+    font-weight: var(--fw-bold);
+    color: var(--clr-secondary-1);
+}
+
+.testimonials {
+    color: var(--clr-primary-1);
+}
+
+.testimonials h2 {
+    font-size: inherit;
+    font-weight: var(--fw-bold);
+}
+
+.testimonials .label {
+    color: var(--clr-secondary-2);
+}
+
+.testimonials .quote {
+    letter-spacing: u.toRem(-.3px);
+    line-height: u.toRem(22px);
+    font-weight: var(--fw-medium);
+}
+
+

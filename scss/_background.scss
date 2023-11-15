@@ -1,0 +1,13 @@
+@use 'sass-utils' as u;
+
+body {
+    background: url("/images/bg-pattern-top-mobile.svg") no-repeat fixed,
+                url("/images/bg-pattern-bottom-mobile.svg") no-repeat fixed bottom right;
+    background-size: 100vw 232px;
+
+    @include u.breakpoint(tablet) {
+        background-image: url("/images/bg-pattern-top-desktop.svg"),
+                          url("/images/bg-pattern-bottom-desktop.svg");
+        background-size: auto;
+    }
+}

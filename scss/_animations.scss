@@ -1,0 +1,17 @@
+@mixin fade-temp($name,$prop) {
+    @keyframes #{$name} {
+        from {
+            opacity: 0;
+            #{$prop}: -4rem;
+        }
+
+        to {
+            opacity: 1;
+            #{$prop}: 0;
+        }
+    }
+}
+
+@include fade-temp(fadeDesc, left);
+@include fade-temp(fadeRates, right);
+@include fade-temp(fadeTestimonials, bottom);
