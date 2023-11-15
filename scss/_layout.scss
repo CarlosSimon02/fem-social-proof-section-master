@@ -22,7 +22,7 @@ main {
 
         @include u.breakpoint(tablet) {
             flex-direction: row;
-            gap: u.fluid(39px, 71px,tablet, small-desktop)
+            margin-bottom: u.fluid(49px, 71px,tablet, small-desktop)
         }
     }
 
