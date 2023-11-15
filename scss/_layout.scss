@@ -33,7 +33,7 @@ main {
         animation: fadeDesc var(--anim-dur) var(--anim-timing-func) var(--anim-delay) 1 normal both;
 
         & h1 {
-            margin-bottom: u.toRem(17px);
+            margin-bottom: u.fluid(17px, 24px,mobile,tablet);
         }
     }
 
@@ -60,6 +60,9 @@ main {
 
             @include u.breakpoint(small-desktop) {
                 width: u.fluid(382px, 445px,small-desktop,desktop);
+                padding-block: u.toRem(20px);
+                padding-inline: u.fluid(16px, 32px,small-desktop,desktop);;
+                gap: u.fluid(15px, 32.45px,small-desktop,desktop);
                 
                 &:nth-child(1) {
                     align-self: start;
@@ -92,6 +95,7 @@ main {
         gap: u.toRem(16px);
         
         @include u.breakpoint(small-desktop) {
+            align-items: start;
             flex-direction: row;
             gap: u.fluid(16px, 30px,small-desktop,desktop);
         }
